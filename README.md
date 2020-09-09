@@ -18,7 +18,7 @@ We can even use the ```pygame.draw.line``` function to create a **bordered squar
 
 To do this, we can create a function called `drawBox` with a few parameters like **screen, color, x, y,** and **thickness**. Then, we add four **pygame.draw.line**'s and change their **x, and y**, *start pos* and *end pos* accordingly. If done correctly, you should have a *drawBox* function ***like this:***
 
-```
+```py
 def drawBox(screen, color, x, y, thickness):
     pygame.draw.line(screen, color, (x + 100, y), (x, y), thickness) #Top
     pygame.draw.line(screen, color, (x, y + 100), (x, y), thickness) #Left
