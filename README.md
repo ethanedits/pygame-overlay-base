@@ -10,7 +10,7 @@ Once the main.py file is ran it will draw an example rectangle, the drawing code
 This will result in an **overlay** like this:
 ![Image of OverlayExampleRect](https://media.discordapp.net/attachments/733974815735808041/753114041462816788/unknown.png?width=825&height=464)
 
-In the ***drawing loop*** (starts at `#drawing loop` and ends at `#end drawing loop`), you can add on whatever type of shape you want using pygame.draw (documentation for it is below)
+In the ***drawing loop*** (starts at `#drawing loop` and ends at `#end drawing loop`), you can add on whatever type of shape you want using ***pygame.draw*** (documentation for it is below)
 
 https://www.pygame.org/docs/ref/draw.html
 
