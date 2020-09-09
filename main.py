@@ -31,4 +31,4 @@ while not done:
   pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(0, 0, 60, 60)) #Example
   #end drawing loop
     
-  pygame.display.update() #Updating display every frame so that the drawings will update in realtime
+  pygame.display.update() #Updating display every frame so that the drawings will update in realtime, allowing you to change the pygame.draw objects attributes (positon, color, etc.) in realtime
