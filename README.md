@@ -1,5 +1,5 @@
 # pygame-overlay-base
-Super Simple "Hello World" for a PyGame overlay.
+Super Simple "Hello World" for a transparent PyGame overlay.
 
 Only two dependencies: *PyGame, and PyWin32(Win32Gui, Win32Api, Win32Con)*
 
