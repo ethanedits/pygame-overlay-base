@@ -3,7 +3,7 @@ Super Simple "Hello World" for a PyGame overlay.
 
 Only two dependencies: *PyGame, and PyWin32(Win32Gui, Win32Api, Win32Con)*
 
-Once the main.py file is ran it will draw an example rectangle, the drawing code for the **filled rectangle** below:
+Once the main.py file is ran it will draw an example rectangle, the drawing code for the **filled rectangle** below (also on line 31 of main.py):
 
 ```pygame.draw.rect(screen, (255, 0, 0), pygame.Rect(0, 0, 60, 60))```
 
