@@ -1,14 +1,9 @@
-import pygame
-import win32api
-import win32gui
-import win32con
-from win32api import GetSystemMetrics
+import pygame, win32api, win32gui, win32con
 
 pygame.init() #Initializing our pygame window
-width = GetSystemMetrics(0) #Getting computers resolution width
-height = GetSystemMetrics(1) #Getting computers resolution height
+width = win32api.GetSystemMetrics(0) #Getting computers resolution width
+height = win32api.GetSystemMetrics(1) #Getting computers resolution height
 screen = pygame.display.set_mode((width, height), pygame.NOFRAME) #Creating our screen, setting it to NOFRAME so we dont see the windows default UI (Minimize, Fullscreen, Exit)
-done = False #For our while loop
 
 fuchsia = (255, 0, 128)  # Transparency color
 
@@ -20,11 +15,11 @@ win32gui.SetWindowLong(hwnd, win32con.GWL_EXSTYLE,
 win32gui.SetLayeredWindowAttributes(hwnd, win32api.RGB(*fuchsia), 0, win32con.LWA_COLORKEY) #Setting window color to transparent
 win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, 0, 0, 0, 0, win32con.SWP_NOSIZE) #Setting window to always be on top
 
-while not done:
+while True:
 
   for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            done = True
+            exit(0)
   screen.fill(fuchsia) #Setting the screen blank every frame so that the drawings will update in realtime
 
   #drawing loop
