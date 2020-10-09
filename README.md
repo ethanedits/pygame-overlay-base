@@ -18,21 +18,21 @@ https://www.pygame.org/docs/ref/draw.html
 
 We can even use the ```pygame.draw.line``` function to create a **bordered square**.
 
-To do this, we can create a function called `drawBox` with a few parameters like **screen, color, x, y,** and **thickness**. Then, we add four **pygame.draw.line**'s and change their **x, and y**, *start pos* and *end pos* accordingly. If done correctly, you should have a *drawBox* function ***like this:***
+To do this, we can create a function called `drawBox` with a few parameters like **screen, color, x, y, width, height** and **thickness**. Then, we add four **pygame.draw.line**'s and change their **x, and y**, *start pos* and *end pos* accordingly. If done correctly, you should have a *drawBox* function ***like this:***
 
 ```py
-def drawBox(screen, color, x, y, thickness):
-    pygame.draw.line(screen, color, (x + 100, y), (x, y), thickness) #Top
-    pygame.draw.line(screen, color, (x, y + 100), (x, y), thickness) #Left
-    pygame.draw.line(screen, color, (x + 100, y), (x + 100, y + 100), thickness) #Right
-    pygame.draw.line(screen, color, (x, y + 100), (x + 100, y + 100), thickness) #Bottom
+def drawBox(screen, color, x, y, width, height, thickness):
+    pygame.draw.line(screen, color, (x + width, y), (x, y), thickness) #Top
+    pygame.draw.line(screen, color, (x, y + height), (x, y), thickness) #Left
+    pygame.draw.line(screen, color, (x + width, y), (x + width, y + height), thickness) #Right
+    pygame.draw.line(screen, color, (x, y + height), (x + width, y + height), thickness) #Bottom
 ```
 
 Then we just need to call our *drawBox* function in our ***drawing loop***:
 
 ```py
 #drawing loop
-drawBox(screen, (255, 0, 0), 0, 0, 1)
+drawBox(screen, (255, 0, 0), 0, 0, 100, 100, 1)
 #end drawing loop
 ```
 
