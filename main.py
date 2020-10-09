@@ -16,7 +16,6 @@ win32gui.SetLayeredWindowAttributes(hwnd, win32api.RGB(*fuchsia), 0, win32con.LW
 win32gui.SetWindowPos(hwnd, win32con.HWND_TOPMOST, 0, 0, 0, 0, win32con.SWP_NOSIZE) #Setting window to always be on top
 
 while True:
-
   for event in pygame.event.get():
         if event.type == pygame.QUIT:
             exit(0)
